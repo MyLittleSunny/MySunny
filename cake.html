@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎂 ເປົ່າທຽນ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎂 ມາອະທິຖານແລ້ວເປົ່າທຽນນຳກັນເນາະທີ່ຮັກ! ✨</h1>
+        <p>ຂໍໃຫ້ຄຳອະທິຖານຂອງເພິ່ນກາຍເປັນຈິງທຸກຢ່າງເລີຍນາາາ ຫວັງວ່າຈະມີເຂົາໃນຄຳອະທິຖານນັ້ນ✨</p>
+        <p>(ກົດທຽນເພື່ອເປົ່າເຄັກ)</p>
+        
+         <div class="cake-container" style="margin-top: 50px;">
+            <img class="cake-img" src="img/cake.png" alt="รูปเค้กวันเกิดสีชมพู">
+            
+            <div class="candle" id="candle" style="margin-top: -300px;">
+                <div class="flame" id="flame" onclick="blowOutCandle()"></div>
+                <div class="smoke hidden" id="smoke">💨</div>
+            </div>
+        </div>
+
+    </div>
+<div id="wish-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h2>🎉 ພອນເປັນຈິງ! 🎉</h2>
+            <p id="modal-message">ເຢ້! ທຽນດັບແລ້ວ! ຂໍໃຫ້ພອນຂອງແຟນກາຍເປັນຈິງທຸກຢ່າງເລີຍນາາາ</p>
+           <div style="margin-top: 50px;">
+        <a href="video.html"  class="nav-button" id="next-to-game">ຄວາມມ່ວນຍັງຖ້າຢູ່ນາຊັນນີ້!</a>
+
+</div>
+        </div>
+    </div>
+    <script>
+        function blowOutCandle() {
+            const flame = document.getElementById('flame');
+            const smoke = document.getElementById('smoke');
+            const candle = document.getElementById('candle');
+            const nextButton = document.getElementById('next-to-game');
+
+            flame.classList.add('hidden'); 
+            smoke.classList.remove('hidden'); 
+            candle.style.boxShadow = 'none'; 
+
+            // 2. แสดง Modal แทน Alert
+            setTimeout(() => {
+                document.getElementById('wish-modal').classList.remove('hidden');
+            }, 800);
+            
+           function closeModal() {
+            document.getElementById('wish-modal').classList.add('hidden');
+        }
+
+        function closeModalAndShowNext() {
+            closeModal();
+            document.getElementById('next-to-game').classList.remove('hidden');
+        }
+        }
+    </script>
+</body>
+</html>
