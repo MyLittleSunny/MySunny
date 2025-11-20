@@ -123,26 +123,61 @@ p {
 }
 
 /* --- Cake & Candle (Page 4) --- */
-.cake-img {
-    max-width: 50%;
-    max-height: 300px;
-    border-radius: 15px;
-    margin-bottom: -50px; 
+.cake-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
-/* ================================================= */
-/* PAGE-SPECIFIC STYLES                              */
-/* ================================================= */
 
-/* --- Cake & Candle (Page 4) --- */
+.cake-img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+}
+
 .candle {
     width: 25px;
-    height: 70px;
+    height: 30px;
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translateX(-50%);
     background: linear-gradient(to top, #fff, #ffe0b2);
-    margin: -190px auto 10px; 
-    border-radius: 5px;
-    position: relative;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
+
+.flame {
+    width: 25px;
+    height: 40px;
+    background: orange;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.smoke {
+    font-size: 2rem;
+    margin-top: -10px;
+}
+
+.hidden {
+    display: none;
+}
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.4rem;
+    }
+    p {
+        font-size: 0.9rem;
+    }
+    .flame {
+        width: 20px;
+        height: 30px;
+    }
+    .nav-button {
+        font-size: 1rem;
+    }
+}
+
 /* ================================================= */
 /* MODAL POPUP STYLES (สำหรับ Alert สวยๆ)            */
 /* ================================================= */
